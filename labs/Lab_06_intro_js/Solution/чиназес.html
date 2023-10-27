@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+
+//Zad1
+
+// Объявление переменной apple со значением 10
+var apple = 10;
+// Вывод переменной с помощью оператора alert()
+alert(apple);
+// Вывод переменной с помощью console.log()
+console.log(apple);
+// Создание переменной condition с случайным значением
+var condition = "Случайная строка";
+// Вывод переменной с конкатенацией в console.log()
+console.log('Good game is ' + condition);
+
+/*Answers to questions (zad1)
+1. Переменная "apple" была объявлена с использованием оператора var.
+2. В JavaScript есть несколько операторов для объявления переменных: var, let, и const. Основное отличие между ними заключается в области видимости и возможности переназначения значения переменной. var имеет функциональную область видимости и может быть переназначен. let и const имеют блочную область видимости, и const не позволяет переназначать значение после инициализации.
+3. Оператор alert() выводит сообщение в диалоговом окне браузера.
+4. console.log() используется для вывода сообщений и данных в консоль браузера и облегчает отладку и мониторинг выполнения JavaScript-кода.*/
+
+//Zad2
+
+// Создание переменных
+var someInt = 42;
+var someStr = '100';
+var someBool = true;
+// Конкатенация и вывод в консоль
+console.log(someInt + someStr);
+console.log(someInt + someBool);
+console.log(someStr + someBool);
+console.log(someStr + someBool + someInt);
+console.log(someBool + someStr + someInt);
+console.log(someInt + someStr + someBool);
+
+//Zad3
+
+// Создание массива и заполнение рандомными числами
+var numbers = [];
+for (var i = 0; i < 10; i++) {
+    numbers.push(Math.random() * 10 - 5); // Генерирует числа от -5 до 5
+}
+
+// Фильтрация чисел меньше 0 с использованием метода filter
+var filteredNumbers = numbers.filter(function(number) 
+{
+    return number >= 0;
+});
+console.log(filteredNumbers);
+
+//Zad4
+
+// Функция, возвращающая случайное число от 0 до 1
+function getRandomNumber() {
+    return Math.random();
+}
+// Проверка работы функции
+console.log(getRandomNumber());
+// Функция, умножающая каждый элемент массива на заданное число
+function multiplyArrayByNumber(arr, multiplier) {
+    var result = arr.map(function(item) 
+    {
+        return item * multiplier;
+    });
+    return result;
+}
+// Пример использования функции
+var originalArray = [1, 2, 3, 4, 5];
+var multipliedArray = multiplyArrayByNumber(originalArray, 2);
+console.log(multipliedArray);
+// Анонимная функция, генерирующая случайное слово
+var generateRandomWord = function() {
+    var words = ["apple", "banana", "cherry", "date", "elderberry"];
+    var randomIndex = Math.floor(Math.random() * words.length);
+    return words[randomIndex];
+};
+// Вывод сгенерированного слова
+console.log(generateRandomWord());
+
+//Working with objects
+
+// Создание пустого объекта
+var person = {};
+// Добавление полей
+person.firstName = "Иван";
+person.surname = "Иванов";
+person.patronymic = "Иванович";
+person.birthday = "01.01.1990";
+person.hobby = "плавание";
+person.group = "A1";
+// Метод, возвращающий информацию о человеке
+person.getInfo = function() {
+    var today = new Date();
+    var birthDate = new Date(this.birthday);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    return `${this.firstName} ${this.surname} ${this.patronymic}, ${this.birthday}, хобби: ${this.hobby}, возраст: ${age}`;
+};
+// Вызов метода и вывод через alert
+alert(person.getInfo());
+// Создание объекта с зарплатами сотрудников
+var salaries = {
+    "Иванов": 50000,
+    "Петров": 60000,
+    "Сидоров": 55000,
+    // Добавьте остальных сотрудников и их зарплаты
+};
+// Подсчет общей зарплаты
+var totalSalary = 0;
+for (var key in salaries) {
+    totalSalary += salaries[key];
+}
+console.log("Общая зарплата сотрудников: " + totalSalary);
+
+
+
+
+
+
+</script>
+</body>
+</html>

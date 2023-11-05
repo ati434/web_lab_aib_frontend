@@ -1,113 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>JS</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
 </head>
 <body>
-<script>
-
-//Zad1
-var a = prompt('Введите первую переменную');
-var b = prompt('Введите вторую переменную');
-if (a === b) 
-{
-    console.log('Переменные равны');
-} 
-else 
-{
-    console.log('Переменные не равны');
-}
-var c = 'world';
-var a = a + c;
-
-//Zad2
-
-var fruits = ['apple', 'strawberry', 'blueberry', 'raspberry', 'lemon'];
-for (var i = 0; i < fruits.length; i++) 
-{
-    console.log(fruits[i]);
-    switch (fruits[i]) {
-        case 'apple':
-            console.log('apple green');
-            break;
-        case 'strawberry':
-            console.log('strawberry red');
-            break;
-        case 'blueberry':
-            console.log('blueberry blue');
-            break;
-        case 'raspberry':
-            console.log('raspberry light red');
-            break;
-        case 'lemon':
-            console.log('lemon yellow');
-            break;
-    }
-}
-
-//Zad3
-
-var numberOfEmployees = parseFloat(prompt('Введите количество сотрудников'));
-var salaryPerPerson = parseFloat(prompt('Введите зарплату на одного человека'));
-while (isNaN(numberOfEmployees) || numberOfEmployees <= 0) 
-{
-    numberOfEmployees = parseFloat(prompt('Введите корректное количество сотрудников'));
-}
-while (isNaN(salaryPerPerson) || salaryPerPerson <= 0) 
-{
-    salaryPerPerson = parseFloat(prompt('Введите корректную зарплату на одного человека'));
-}
-var totalSalary = numberOfEmployees * salaryPerPerson;
-alert('Затраты на ЗП: ' + totalSalary);
-
-//Zad4
-
-var students = 
-[
-    { surname: 'Пупков П.П', Ocenka: 5 },
-    { surname: 'Глазиков Г.Г', Ocenka: 3.4 },
-    { surname: 'Пузиков П.П', Ocenka: 9 },
-    { surname: 'Мухоморов М.М', Ocenka: 2 },
-    { surname: 'Чёрный Молодой Банан ', Ocenka: 3.4 }
-];
-var totalScore = 0;
-var numberOfStudents = 0;
-var badStudents = [];
-
-for (var i = 0; i < students.length; i++) 
-{
-    if (students[i].Ocenka >= 0 && students[i].Ocenka <= 5) {
-        totalScore += students[i].Ocenka;
-        numberOfStudents++;
-
-        if (students[i].Ocenka < 4) {
-            badStudents.push(students[i]);
+    <script>
+        // Zad1
+        let a = prompt('Введите первую переменную');
+        let b = prompt('Введите вторую переменную');
+        if (a === b) {
+            console.log('Переменные равны');
+        } else {
+            console.log('Переменные не равны');
         }
-    }
-}
+        let c = 'world';
+        a = a + c;
 
-var averageScore = totalScore / numberOfStudents;
-console.log('Средняя оценка: ' + averageScore);
+        // Zad2
+        let fruits = ['apple', 'strawberry', 'blueberry', 'raspberry', 'lemon'];
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+            switch (fruits[i]) {
+                case 'apple':
+                    console.log('apple green');
+                    break;
+                case 'strawberry':
+                    console.log('strawberry red');
+                    break;
+                case 'blueberry':
+                    console.log('blueberry blue');
+                    break;
+                case 'raspberry':
+                    console.log('raspberry light red');
+                    break;
+                case 'lemon':
+                    console.log('lemon yellow');
+                    break;
+            }
+        }
 
-console.log('Плохие студенты:');
-if (badStudents.length === 0) 
-{
-    console.log('Таких нет');
-}
-else 
-{
-    badStudents.forEach(function (student) {
-        console.log('Фамилия: ' + student.surname + '; Оценка: ' + student.Ocenka);
-    });
-}
+        // Zad3
+        let numberOfEmployees = parseFloat(prompt('Введите количество сотрудников'));
+        let salaryPerPerson = parseFloat(prompt('Введите зарплату на одного человека'));
+        while (isNaN(numberOfEmployees) || numberOfEmployees <= 0) {
+            numberOfEmployees = parseFloat(prompt('Введите корректное количество сотрудников'));
+        }
+        while (isNaN(salaryPerPerson) || salaryPerPerson <= 0) {
+            salaryPerPerson = parseFloat(prompt('Введите корректную зарплату на одного человека'));
+        }
+        let totalSalary = numberOfEmployees * salaryPerPerson;
+        alert('Затраты на ЗП: ' + totalSalary);
 
+        // Zad4
+        let students = [
+            { surname: 'Пупков П.П', Mark: 5 },
+            { surname: 'Глазиков Г.Г', Mark: 3.4 },
+            { surname: 'Пузиков П.П', Mark: 9 },
+            { surname: 'Мухоморов М.М', Mark: 2 },
+            { surname: 'Чёрный Молодой Банан', Mark: 3.4 }
+        ];
+        let totalScore = 0;
+        let numberOfStudents = 0;
+        let badStudents = [];
 
-//Zad5 - ХАЛЯВА!!
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].Ocenka >= 0 && students[i].Mark <= 5) {
+                totalScore += students[i].Mark;
+                numberOfStudents++;
 
+                if (students[i].Mark < 4) {
+                    badStudents.push(students[i]);
+                }
+            }
+        }
 
+        let averageScore = totalScore / numberOfStudents;
+        console.log('Средняя оценка: ' + averageScore);
 
-</script>
+        console.log('Плохие студенты:');
+        if (badStudents.length === 0) {
+            console.log('Таких нет');
+        } else {
+            badStudents.forEach(function (student) {
+                console.log('Фамилия: ' + student.surname + '; Оценка: ' + student.Mark);
+            });
+        }
+
+                // Zad5 - ХАЛЯВА!!
+    </script>
 </body>
 </html>

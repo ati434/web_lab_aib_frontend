@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Кнопочка</title>
+    <style>
+        .button_cont {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px;
+        }
+
+        button {
+            text-align: center;
+            width: 20%;
+            height: 50px;
+            font-size: 20px;
+            color: #FFFFFF;
+            background-color: rgb(25, 150, 125); 
+            border: 2px solid #000000; 
+            border-radius: 5px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button.active {
+            background-color: inherit; 
+        }
+
+        button:hover {
+            background-color: rgb(20, 120, 100);
+        }
+    </style>
+</head>
+<body id="body">
+    <main>
+        <div class="button_cont">
+            <div class="button"><button id="blueButton" type="button">синий</button></div>
+            <div class="button"><button id="redButton" type="button">красный</button></div>
+            <div class="button"><button id="greenButton" type="button">зеленый</button></div>
+            <script src="app.js"></script>
+        </div>
+    </main>
+</body>
+</html>

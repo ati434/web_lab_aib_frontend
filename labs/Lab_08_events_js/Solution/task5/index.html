@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chinane</title>
+</head>
+<body id="body">
+    <main>
+        <div class="slider">
+            <button class="arrow left">&lt;</button>
+            <div class="block" id="block"></div>
+            <button class="arrow right">&gt;</button>
+        </div>
+        <div class="main">
+            <div class="input_cont">
+                <div class="input">
+                    <label for="redInput">Red</label>
+                    <input type="number" id="redInput" min="0" max="255">
+                </div>
+                <div class="input">
+                    <label for="greenInput">Green</label>
+                    <input type="number" id="greenInput" min="0" max="255">
+                </div>
+                <div class="input">
+                    <label for="blueInput">Blue</label>
+                    <input type="number" id="blueInput" min="0" max="255">
+                </div><br>
+                <div class="inputButton">
+                    <button id="inputButton" type="button">Сгенерировать</button>
+                </div>
+            </div>
+            <div id="square" class="square"></div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

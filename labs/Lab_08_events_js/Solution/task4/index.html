@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lost of Colors</title>
+    <link rel="icon" type="image/png" href="i.png">
+</head>
+<body id="body">
+    <main>
+        <div class="input_cont">
+            <div class="input">
+                <label for="redInput">Red</label>
+                <input type="number" id="redInput" min="0" max="255">
+            </div>
+            <div class="input">
+                <label for="greenInput">Green</label>
+                <input type="number" id="greenInput" min="0" max="255">
+            </div>
+            <div class="input">
+                <label for="blueInput">Blue</label>
+                <input type="number" id="blueInput" min="0" max="255">
+            </div>
+            <button id="generateButton">Сгенерировать</button>
+        </div>
+        <div id="blocksContainer" class="blocks-container"></div>
+        <div id="square" class="square"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

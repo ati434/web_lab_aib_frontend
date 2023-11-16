@@ -1,0 +1,172 @@
+body {
+    background-color: rgb(25, 150, 125);
+    font-family: 'Arial', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    margin-bottom: 15px;
+    background-color: rgb(20, 120, 100);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+    font-family: 'Comic Sans MS', cursive;
+    transition: color 0.3s ease;
+    padding: 12px;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label[for="redInput"] {
+    background-color: #ffdddd;
+}
+
+label[for="greenInput"] {
+    background-color: #d3ffd3;
+}
+
+label[for="blueInput"] {
+    background-color: #cfe3ff;
+}
+
+label[for="redInput"]:hover {
+    color: red;
+}
+
+label[for="greenInput"]:hover {
+    color: green;
+}
+
+label[for="blueInput"]:hover {
+    color: blue;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+}
+
+input[type="number"]:hover {
+    border-color: #555;
+}
+
+.square {
+    padding: 40%;
+}
+
+.block {
+    display: flex;
+    width: 500px;
+    max-width: 500px;
+    height: 500px;
+    white-space: nowrap;
+}
+
+.block > div:not(:first-child) {
+    display: none;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 0 10px;
+    outline: none;
+    border: none;
+}
+
+.arrow:focus,
+.arrow:active {
+    background-color: gray;
+}
+
+button:hover {
+    background-color: rgb(20, 120, 100);
+    border-color: #555;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: rgb(25, 150, 125);
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-left: -1%;
+}
+
+.newBlock {
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+}
+
+.newBlock.selected {
+    border-width: 5px;
+}
+
+.arrow.right {
+    background-color: rgb(25, 150, 125);
+    border: 2px solid #555;
+    border-radius: 8px;
+    color: white;
+}
+
+.arrow.left {
+    background-color: rgb(25, 150, 125);
+    border: 2px solid #555;
+    border-radius: 8px;
+    color: white;
+}
+
